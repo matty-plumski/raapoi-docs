@@ -1,3 +1,4 @@
+![Rapoi_logo](img/Raapoi_logo.png)
 
 The Rāpoi HPC Cluster (aka raapoi) is a Uni-wide computing
 resource that uses the Slurm resource manager to schedule jobs and reserve
