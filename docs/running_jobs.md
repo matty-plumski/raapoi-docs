@@ -1,4 +1,3 @@
-# Running jobs
 
 ## Batch jobs
 

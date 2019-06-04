@@ -1,5 +1,3 @@
-### Managing Jobs
-
 ## Cancelling a Job
 
 To cancel a job, first find the jobID, you can use the _vuw-myjobs_ (or _squeue_) command to see a list of your jobs, including jobIDs.  Once you have that you can use the _scancel_ command, eg

@@ -16,6 +16,11 @@ h5 {
     color: #343131;
 }
 
+.caption-text {
+    color: #B2A67F;
+}
+
+
 a:visited {
     color: #B2A67F;
 }
@@ -29,6 +34,14 @@ a:visited {
     text-align: center;
     font-size: 100%;
     *zoom: 1;
+}
+
+.wy-menu-vertical span {
+    color: #B2A67F;
+}
+
+.wy-menu-vertical li.current a {
+    color: #0a0707;
 }
 
 .wy-side-nav-search {
