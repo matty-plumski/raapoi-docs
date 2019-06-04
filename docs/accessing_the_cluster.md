@@ -19,7 +19,7 @@ using the hostname and instead need to use the IP address, eg
 More information on VUW VPN services can be found [here](https://www.victoria.ac.nz/its/staff-services/core-tools-and-services/remote-access).
 
 
-#### SSH Clients
+### SSH Clients
 _Mac OSX SSH Clients_
 You can use the built-in Terminal.app or you can download iTerm2 or XQuartz. XQuartz is required to be installed if you wish to forward GUI applications (matlab, rstudio, xstata, sas, etc), aka X forwarding.
 

@@ -1,5 +1,4 @@
-# Basic Commands
-#### The _vuw_ Commands
+### The _vuw_ Commands
 
 In an effort to make using raapoi just a bit easier, CAD staff have created commands to help you view useful information.  We call these the _vuw_ commands.  This is because all the commands begin with the string _vuw_.  This makes it easier to see the commands available to you.  If, at a command prompt you type _vuw_ followed immediately by two _TAB_ keys you will see a list of available commands beginning with _vuw_.  Go ahead and type vuw-TAB-TAB to see for yourself.
 
@@ -14,7 +13,7 @@ The commands available as of this update are:
 * _vuw-job-history_:     Show jobs finished in last 5 days
 
 
-#### Linux Commands
+### Linux Commands
 
 Raapoi is built using the Linux operating system. Access is primarily via command line interface (CLI) as opposed to the graphical user interfaces (GUI) that you are more familiar with (such as those on Windows or Mac) Below are a list of common commands for viewing and managing files and directories (replace the file and directory names with ones you own):
 
@@ -43,7 +42,7 @@ The _-r_ flag recursively removes files and directories
 
 Other Commands you may use: _alias, awk, cat, export, for, grep, gzip, if, less, sed, tar, while_
 
-#### Learning the Linux Shell
+### Learning the Linux Shell
 
 A good tutorial for using linux can be found here:
 [Learning the linux shell](http://linuxcommand.org/lc3_learning_the_shell.php)

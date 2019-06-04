@@ -1,6 +1,3 @@
-
-# Connecting to Cloud Providers
-
 ## Amazon AWS
 
 A feature-rich CLI is available in raapoi.  To use it you need to load the appropriate module and its module dependencies:

@@ -1,4 +1,4 @@
-# Using Containers
+### Using Containers
 
 Researchers can use Docker or Singularity containers within the cluster.  This is a great way to run difficult-to-compile applications or to share workflows among colleagues.
 
