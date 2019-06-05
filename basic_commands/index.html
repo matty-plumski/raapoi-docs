@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Support - Raapoi Cluster Documentation</title>
+  <title>Basic Commands - Raapoi Cluster Documentation</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
@@ -18,9 +18,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Support";
-    var mkdocs_page_input_path = "support.md";
-    var mkdocs_page_url = "/raapoi-docs/support/";
+    var mkdocs_page_name = "Basic Commands";
+    var mkdocs_page_input_path = "basic_commands.md";
+    var mkdocs_page_url = "/raapoi-docs/basic_commands/";
   </script>
   
   <script src="../js/jquery-2.1.1.min.js" defer></script>
@@ -62,9 +62,21 @@
                     
     <a class="" href="../accessing_the_cluster/">Accessing the Cluster</a>
                 </li>
-                <li class="">
+                <li class=" current">
                     
-    <a class="" href="../basic_commands/">Basic Commands</a>
+    <a class="current" href="./">Basic Commands</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#the-vuw-commands">The vuw Commands</a></li>
+    
+
+    <li class="toctree-l3"><a href="#linux-commands">Linux Commands</a></li>
+    
+
+    <li class="toctree-l3"><a href="#learning-the-linux-shell">Learning the Linux Shell</a></li>
+    
+
+    </ul>
                 </li>
                 <li class="">
                     
@@ -109,12 +121,9 @@
     </ul>
 	    </li>
           
-            <li class="toctree-l1 current">
+            <li class="toctree-l1">
 		
-    <a class="current" href="./">Support</a>
-    <ul class="subnav">
-            
-    </ul>
+    <a class="" href="../support/">Support</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -143,8 +152,12 @@
     <li><a href="..">Docs</a> &raquo;</li>
     
       
+        
+          <li>Documentation &raquo;</li>
+        
+      
     
-    <li>Support</li>
+    <li>Basic Commands</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -154,27 +167,44 @@
           <div role="main">
             <div class="section">
               
-                <p>Check out the <a href="..">Documentation</a> section for a comprehensive overview of how to use raapoi.</p>
-<p>Visit the <a href="https://uwrc.slack.com">Raapoi Slack Channel</a> for help, software requests or to communicate with others in the raapoi community.</p>
-<p>Need an account on raapoi or access to the Slack channel? Contact the CAD Research Support team:</p>
-<p><img src="../img/Andre.jpg" width="200" height="200"> 
-<br>
-Andre Geldenhuis
-<br>
-Research Software Engineer 
-<br>
-<a href="mailto:andre.geldenhuis@vuw.ac.nz"><code>andre.geldenhuis@vuw.ac.nz</code></a></p>
-<p><img src="../img/Wes.jpg" width="200" height="200"> <br>
-Wes Harrell
-<br>
-Research Software Engineer <br>
-<a href="mailto:wes.harrell@vuw.ac.nz"><code>wes.harrell@vuw.ac.nz</code></a></p>
-<p><img src="../img/Matt.jpg" width="200" height="200"> <br> 
-Matt Plummer
-<br>
-Digital Research Consultant
-<br>
-<a href="mailto:matt.plummer@vuw.ac.nz"><code>matt.plummer@vuw.ac.nz</code></a></p>
+                <h3 id="the-vuw-commands">The <em>vuw</em> Commands<a class="headerlink" href="#the-vuw-commands" title="Permanent link">&para;</a></h3>
+<p>In an effort to make using raapoi just a bit easier, CAD staff have created commands to help you view useful information.  We call these the <em>vuw</em> commands.  This is because all the commands begin with the string <em>vuw</em>.  This makes it easier to see the commands available to you.  If, at a command prompt you type <em>vuw</em> followed immediately by two <em>TAB</em> keys you will see a list of available commands beginning with <em>vuw</em>.  Go ahead and type vuw-TAB-TAB to see for yourself.</p>
+<p>The commands available as of this update are:</p>
+<ul>
+<li><em>vuw-help</em>:            Prints this help information</li>
+<li><em>vuw-job-report</em>:      Provides some summary information about a job</li>
+<li><em>vuw-quota</em>:           Prints current storage quota and usage</li>
+<li><em>vuw-partitions</em>:      Prints a list of available partitions and the availability of compute nodes</li>
+<li><em>vuw-alljobs</em>:         Prints a list of all user jobs</li>
+<li><em>vuw-myjobs</em>:          Prints a list of your running or pending jobs</li>
+<li><em>vuw-job-history</em>:     Show jobs finished in last 5 days</li>
+</ul>
+<h3 id="linux-commands">Linux Commands<a class="headerlink" href="#linux-commands" title="Permanent link">&para;</a></h3>
+<p>Raapoi is built using the Linux operating system. Access is primarily via command line interface (CLI) as opposed to the graphical user interfaces (GUI) that you are more familiar with (such as those on Windows or Mac) Below are a list of common commands for viewing and managing files and directories (replace the file and directory names with ones you own):</p>
+<p><strong>ls</strong> - This command lists the contents of the current directory
+<em> <em>ls -l</em> This is the same command with a flag (-l) which lists the contents with more information, including access permissions
+</em> <em>ls -a</em> Same ls command but this time the -a flag which will also list hidden files. Hidden files start with a . (period)
+* <em>ls -la</em> Stringing flags together</p>
+<p><strong>cd</strong> - This will change your location to a different directory (folder)
+<em> <em>cd projects/calctest_proj</em>
+</em> Typing <em>cd</em> with no arguments will take you back to your home directory</p>
+<p><strong>mv</strong> - This will move or rename a file</p>
+<ul>
+<li><em>mv project1.txt project2.txt</em></li>
+<li><em>mv project2.txt projects/calctest_proj/</em></li>
+</ul>
+<p><strong>rm</strong> - This will delete a file</p>
+<ul>
+<li><em>rm projects/calctest_proj/projects2.txt</em></li>
+<li><em>rm -r projects/calctest_proj/code</em>
+The <em>-r</em> flag recursively removes files and directories</li>
+</ul>
+<p><strong>mkdir</strong> - This will create a new directory
+* <em>mkdir /nfs/home/myusername/financial</em></p>
+<p>Other Commands you may use: <em>alias, awk, cat, export, for, grep, gzip, if, less, sed, tar, while</em></p>
+<h3 id="learning-the-linux-shell">Learning the Linux Shell<a class="headerlink" href="#learning-the-linux-shell" title="Permanent link">&para;</a></h3>
+<p>A good tutorial for using linux can be found here:
+<a href="http://linuxcommand.org/lc3_learning_the_shell.php">Learning the linux shell</a></p>
               
             </div>
           </div>
@@ -182,10 +212,10 @@ Digital Research Consultant
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../ganglia/" class="btn btn-neutral float-right" title="Utilisation">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../storage/" class="btn btn-neutral float-right" title="Storage and Quotas">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../examples/" class="btn btn-neutral" title="Examples"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../accessing_the_cluster/" class="btn btn-neutral" title="Accessing the Cluster"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -211,10 +241,10 @@ Digital Research Consultant
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../examples/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../accessing_the_cluster/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../ganglia/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../storage/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

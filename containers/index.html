@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Support - Raapoi Cluster Documentation</title>
+  <title>Using Containers - Raapoi Cluster Documentation</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
@@ -18,9 +18,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Support";
-    var mkdocs_page_input_path = "support.md";
-    var mkdocs_page_url = "/raapoi-docs/support/";
+    var mkdocs_page_name = "Using Containers";
+    var mkdocs_page_input_path = "containers.md";
+    var mkdocs_page_url = "/raapoi-docs/containers/";
   </script>
   
   <script src="../js/jquery-2.1.1.min.js" defer></script>
@@ -94,9 +94,18 @@
                     
     <a class="" href="../cloud_providers/">Connecting to Cloud Providers</a>
                 </li>
-                <li class="">
+                <li class=" current">
                     
-    <a class="" href="../containers/">Using Containers</a>
+    <a class="current" href="./">Using Containers</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#running-an-interactive-container">Running an interactive container</a></li>
+    
+
+    <li class="toctree-l3"><a href="#running-a-container-in-batch">Running a container in batch</a></li>
+    
+
+    </ul>
                 </li>
                 <li class="">
                     
@@ -109,12 +118,9 @@
     </ul>
 	    </li>
           
-            <li class="toctree-l1 current">
+            <li class="toctree-l1">
 		
-    <a class="current" href="./">Support</a>
-    <ul class="subnav">
-            
-    </ul>
+    <a class="" href="../support/">Support</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -143,8 +149,12 @@
     <li><a href="..">Docs</a> &raquo;</li>
     
       
+        
+          <li>Documentation &raquo;</li>
+        
+      
     
-    <li>Support</li>
+    <li>Using Containers</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -154,27 +164,38 @@
           <div role="main">
             <div class="section">
               
-                <p>Check out the <a href="..">Documentation</a> section for a comprehensive overview of how to use raapoi.</p>
-<p>Visit the <a href="https://uwrc.slack.com">Raapoi Slack Channel</a> for help, software requests or to communicate with others in the raapoi community.</p>
-<p>Need an account on raapoi or access to the Slack channel? Contact the CAD Research Support team:</p>
-<p><img src="../img/Andre.jpg" width="200" height="200"> 
-<br>
-Andre Geldenhuis
-<br>
-Research Software Engineer 
-<br>
-<a href="mailto:andre.geldenhuis@vuw.ac.nz"><code>andre.geldenhuis@vuw.ac.nz</code></a></p>
-<p><img src="../img/Wes.jpg" width="200" height="200"> <br>
-Wes Harrell
-<br>
-Research Software Engineer <br>
-<a href="mailto:wes.harrell@vuw.ac.nz"><code>wes.harrell@vuw.ac.nz</code></a></p>
-<p><img src="../img/Matt.jpg" width="200" height="200"> <br> 
-Matt Plummer
-<br>
-Digital Research Consultant
-<br>
-<a href="mailto:matt.plummer@vuw.ac.nz"><code>matt.plummer@vuw.ac.nz</code></a></p>
+                <p>Researchers can use Docker or Singularity containers within the cluster.  This is a great way to run difficult-to-compile applications or to share workflows among colleagues.</p>
+<h2 id="running-an-interactive-container">Running an interactive container<a class="headerlink" href="#running-an-interactive-container" title="Permanent link">&para;</a></h2>
+<p>User can run within a container interactively, this is great for testing code before running a job.  Here is an example of running within a docker container that has the blockchain software called BlockSci:</p>
+<pre><code>module load singularity
+srun --pty -c 4 --mem=16G bash
+singularity pull docker://tislaamo/blocksci
+singularity shell blocksci.simg
+</code></pre>
+
+<p>Once you have typed the <em>singularity shell</em> command you will be within the
+container and can type the commands available from within the container such as
+the BlockSci utility <strong>blocksci_parser</strong></p>
+<h2 id="running-a-container-in-batch">Running a container in batch<a class="headerlink" href="#running-a-container-in-batch" title="Permanent link">&para;</a></h2>
+<p>Running a batch job with containers is similar to running a regular job, but will ultimately depend on how the container was created, so your mileage may vary.  Here is an example batch submit script that will run the BlockSci software that was created in an Ubuntu docker image, lets name the submit file runContainer.sh:</p>
+<pre><code>#SBATCH -J blockchain_parser
+#SBATCH -c 4
+#SBATCH --mem=16G
+#SBATCH --mailtype=BEGIN,END,FAIL
+#SBATCH --mail-user=myemail@email.net
+#SBATCH --time=12:00:00
+
+module load singularity
+singularity exec blocksci.simg blocksci_parser --output-directory bitcoin-data update disk --coin-directory bitcoin
+</code></pre>
+
+<p>Now to run the file you can:</p>
+<pre><code>module load singularity
+singularity pull docker://tislaamo/blocksci
+sbatch runContainer.sh
+</code></pre>
+
+<p>Note that <em>singularity shell</em> is primarily for interactive use and <em>singularity exec</em> (or possibly <em>singularity run</em>) are for executing the applications that were built within the container directly.  It is important to know how the container was created to make effective use of the software.</p>
               
             </div>
           </div>
@@ -182,10 +203,10 @@ Digital Research Consultant
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../ganglia/" class="btn btn-neutral float-right" title="Utilisation">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../notebooks/" class="btn btn-neutral float-right" title="Using Jupyter Notebooks">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../examples/" class="btn btn-neutral" title="Examples"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../cloud_providers/" class="btn btn-neutral" title="Connecting to Cloud Providers"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -211,10 +232,10 @@ Digital Research Consultant
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../examples/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../cloud_providers/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../ganglia/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../notebooks/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

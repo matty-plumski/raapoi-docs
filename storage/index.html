@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Support - Raapoi Cluster Documentation</title>
+  <title>Storage and Quotas - Raapoi Cluster Documentation</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
@@ -18,9 +18,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Support";
-    var mkdocs_page_input_path = "support.md";
-    var mkdocs_page_url = "/raapoi-docs/support/";
+    var mkdocs_page_name = "Storage and Quotas";
+    var mkdocs_page_input_path = "storage.md";
+    var mkdocs_page_url = "/raapoi-docs/storage/";
   </script>
   
   <script src="../js/jquery-2.1.1.min.js" defer></script>
@@ -66,9 +66,15 @@
                     
     <a class="" href="../basic_commands/">Basic Commands</a>
                 </li>
-                <li class="">
+                <li class=" current">
                     
-    <a class="" href="../storage/">Storage and Quotas</a>
+    <a class="current" href="./">Storage and Quotas</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#storage-and-quotas">Storage and quotas</a></li>
+    
+
+    </ul>
                 </li>
                 <li class="">
                     
@@ -109,12 +115,9 @@
     </ul>
 	    </li>
           
-            <li class="toctree-l1 current">
+            <li class="toctree-l1">
 		
-    <a class="current" href="./">Support</a>
-    <ul class="subnav">
-            
-    </ul>
+    <a class="" href="../support/">Support</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -143,8 +146,12 @@
     <li><a href="..">Docs</a> &raquo;</li>
     
       
+        
+          <li>Documentation &raquo;</li>
+        
+      
     
-    <li>Support</li>
+    <li>Storage and Quotas</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -154,27 +161,24 @@
           <div role="main">
             <div class="section">
               
-                <p>Check out the <a href="..">Documentation</a> section for a comprehensive overview of how to use raapoi.</p>
-<p>Visit the <a href="https://uwrc.slack.com">Raapoi Slack Channel</a> for help, software requests or to communicate with others in the raapoi community.</p>
-<p>Need an account on raapoi or access to the Slack channel? Contact the CAD Research Support team:</p>
-<p><img src="../img/Andre.jpg" width="200" height="200"> 
-<br>
-Andre Geldenhuis
-<br>
-Research Software Engineer 
-<br>
-<a href="mailto:andre.geldenhuis@vuw.ac.nz"><code>andre.geldenhuis@vuw.ac.nz</code></a></p>
-<p><img src="../img/Wes.jpg" width="200" height="200"> <br>
-Wes Harrell
-<br>
-Research Software Engineer <br>
-<a href="mailto:wes.harrell@vuw.ac.nz"><code>wes.harrell@vuw.ac.nz</code></a></p>
-<p><img src="../img/Matt.jpg" width="200" height="200"> <br> 
-Matt Plummer
-<br>
-Digital Research Consultant
-<br>
-<a href="mailto:matt.plummer@vuw.ac.nz"><code>matt.plummer@vuw.ac.nz</code></a></p>
+                <h1 id="storage-and-quotas">Storage and quotas<a class="headerlink" href="#storage-and-quotas" title="Permanent link">&para;</a></h1>
+<p>Currently users have 2 main storage areas:</p>
+<ul>
+<li>
+<p><strong>/nfs/home/USERNAME</strong> - This is your Home Directory, each user has a <em>50 GB</em> quota limit.</p>
+</li>
+<li>
+<p><strong>/nfs/scratch/USERNAME</strong> - This is you scratch space, each user has a <em>5 TB</em> quota limit </p>
+</li>
+</ul>
+<p>To view your current quota and usage use the <em>vuw-quota</em> command, for example:</p>
+<pre><code>harrelwe@raapoi-master:~$ vuw-quota 
+
+Quotas for home directory
+
+                       Storage  Usage (GB)  Quota (GB)     % Used 
+            /nfs/home/harrelwe        0.10       50.00      0.20%
+</code></pre>
               
             </div>
           </div>
@@ -182,10 +186,10 @@ Digital Research Consultant
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../ganglia/" class="btn btn-neutral float-right" title="Utilisation">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../partitions/" class="btn btn-neutral float-right" title="Using Paritions">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../examples/" class="btn btn-neutral" title="Examples"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../basic_commands/" class="btn btn-neutral" title="Basic Commands"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -211,10 +215,10 @@ Digital Research Consultant
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../examples/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../basic_commands/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../ganglia/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../partitions/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
