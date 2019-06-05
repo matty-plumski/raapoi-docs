@@ -1,6 +1,5 @@
-# Using Jupyter Notebooks
 
-### Starting and Working with a Jupyter Notebook
+## Starting and Working with a Jupyter Notebook
 
 __Step 1:__ The best way to start jupyter is with a batch submit script.  We have created an example script.  You can copy this script from one available on the cluster, just type the following:
 ```

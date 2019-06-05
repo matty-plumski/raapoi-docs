@@ -1,7 +1,7 @@
-# Accessing the cluster
+# Accessing the Cluster
 
-To access Rāpoi, you'll first need to get an account provisioned for you by contacting the [CAD research support team](/support) with your VUW staff username.
-If you don't have a VUW staff account, it may still be possible to be given access - please [contact us](/support.md) to determine options.
+To access Rāpoi, you'll first need to get an account provisioned for you by contacting the [CAD research support team](../support) with your VUW staff username.
+If you don't have a VUW staff account, it may still be possible to be given access - please [contact us](../support) to determine options.
 
 _Access is via SSH_
 

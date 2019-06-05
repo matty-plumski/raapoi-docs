@@ -55,7 +55,7 @@ hour and the parallel partition has a max runtime of 10 days.
 
 _Partition: quicktest_
 
-This parttion is for quick tests of code, environment, software builds or
+This partition is for quick tests of code, environment, software builds or
 similar short-run jobs.  Since the max time limit is 1 hour it should not take
 long for your job to run.  This can also be used for near-on-demand interactive
 jobs.

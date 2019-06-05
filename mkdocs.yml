@@ -1,11 +1,11 @@
-site_name: Raapoi Cluster Documentation
+site_name: Rāpoi Cluster Documentation
 nav: 
   - Overview: 'index.md'
   - Documentation:
     - 'Accessing the Cluster': 'accessing_the_cluster.md'
     - 'Basic Commands': 'basic_commands.md'
     - 'Storage and Quotas': 'storage.md'
-    - 'Using Paritions': 'partitions.md'
+    - 'Using Partitions': 'partitions.md'
     - 'Preparing your Environment': 'environment.md'
     - 'Running Jobs': 'running_jobs.md'
     - 'Parallel Processing': 'parallel_processing.md'
