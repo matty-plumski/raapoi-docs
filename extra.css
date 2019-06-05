@@ -1,3 +1,50 @@
+@font-face {
+    font-family: 'National';
+    font-weight: 400;
+    src: url('https://www.victoria.ac.nz/assets/fonts/NationalWebLF-Regular.eot');
+    src: url('https://www.victoria.ac.nz/assets/fonts/NationalWebLF-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('https://www.victoria.ac.nz/assets/fonts/NationalWebLF-Regular.woff') format('woff'), /* Modern Browsers */
+         url('https://www.victoria.ac.nz/assets/fonts/NationalWebLF-Regular.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+
+@font-face {
+font-family: 'Segoe WP N';
+font-style: normal;
+font-weight: lighter;
+src: local('Segoe WP N'), url('../site/fonts/SegoeWPN.woff') format('woff');
+}
+
+@font-face {
+font-family: 'Segoe UI Regular';
+font-style: normal;
+font-weight: lighter;
+src: local('Segoe UI Regular'), url('../site/fonts/Segoe UI.woff') format('woff');
+}
+
+
+@font-face {
+font-family: 'Segoe UI Italic';
+font-style: normal;
+font-weight: normal;
+src: local('Segoe UI Italic'), url('../site/fonts/Segoe UI Italic.woff') format('woff');
+}
+
+
+@font-face {
+font-family: 'Segoe UI Bold';
+font-style: normal;
+font-weight: normal;
+src: local('Segoe UI Bold'), url('../site/fonts/Segoe UI Bold.woff') format('woff');
+}
+
+
+@font-face {
+font-family: 'Segoe UI Bold Italic';
+font-style: normal;
+font-weight: normal;
+src: local('Segoe UI Bold Italic'), url('site/fonts/Segoe UI Bold Italic.woff') format('woff');
+}
+
 h1 {
   color: #115737;
 }
@@ -10,7 +57,7 @@ h1, h2, h3, h4, h6, legend {
  }
 
 h5 { 
-	margin-top: 0px;
+    margin-top: 0px;
     font-weight: 700;
     font-family: "National","Segoe WP Semibold","Nimbus Sans L",Arial,"Helvetica Neue","Helvetica",sans-serif;
     color: #343131;
@@ -55,7 +102,7 @@ a:visited {
 }
 
 body {
-    font-family: "Segoe WP","Nimbus Sans L",Arial,"Helvetica Neue","Helvetica",sans-serif;
+    font-family: "Segoe UI Regular","Nimbus Sans L",Arial,"Helvetica Neue","Helvetica",sans-serif;
     font-weight: normal;
     color: #404040;
     min-height: 100%;
