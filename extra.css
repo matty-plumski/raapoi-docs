@@ -54,7 +54,7 @@ h1, h2, h3, h4, h6, legend {
     font-weight: 700;
     font-family: "National","Segoe WP Semibold","Nimbus Sans L",Arial,"Helvetica Neue","Helvetica",sans-serif;
     color: #115737;
-    letter-spacing: -0.5px;
+    letter-spacing: -1px;
  }
 
 h5 { 
